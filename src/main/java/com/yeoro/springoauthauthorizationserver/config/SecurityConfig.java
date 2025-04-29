@@ -24,7 +24,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    //OAuth2 인가 서버를 위한 SecurityFilterChain
+    //OAuth2 인가 서버를 위한 SecurityFilterChain 등록부
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     public SecurityFilterChain authorizationServer(HttpSecurity http) throws Exception {
