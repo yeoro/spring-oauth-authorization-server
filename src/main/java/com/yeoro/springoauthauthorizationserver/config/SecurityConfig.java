@@ -46,7 +46,7 @@ public class SecurityConfig {
                 .securityMatcher(authorizationServerConfigurer.getEndpointsMatcher())
                 .with(authorizationServerConfigurer, Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth
-                    .anyRequest().permitAll());
+                    .anyRequest().authenticated());
 
         http
                 .exceptionHandling(exceptions -> exceptions
